@@ -1,3 +1,7 @@
 {
-    "python.pythonPath": "/home/longxiajun/MySoftware/anaconda3/envs/tf3_5/bin/python"
+    "python.pythonPath": "/home/longxiajun/MySoftware/anaconda3/envs/tf3_5/bin/python",
+    "cSpell.words": [
+        "reduce",
+        "rtype"
+    ]
 }

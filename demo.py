@@ -1,12 +1,10 @@
-def climbStairs(n: int) -> int:
-    if n == 1:
-        return 1
-    a, b = 1, 2
-    for i in range(2, n):
-        tmp = b
-        b = a+b
-        a = tmp
-    return b
+print(
+    int(''.join(reversed(list(bin(0b00000010100101000001111010011100)[2:]))), 2))
 
+for i in reversed(list(bin(0b00000010100101000001111010011100))):
+    print(i)
 
-print(climbStairs(4))
+a = list(reversed(list(bin(0b00000010100101000001111010011100))[2:]))
+print(a)
+a.append(['0' * (32 - len(a))])
+print(a)
