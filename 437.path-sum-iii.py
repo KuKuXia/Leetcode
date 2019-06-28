@@ -59,3 +59,14 @@ class Solution(object):
         :type sum: int
         :rtype: int
         """
+        return self.helper(root, sum, [sum])
+
+    def helper(self, node, origin, targets):
+        if not node:
+            return 0
+        hit = 0
+        for t in targets:
+            if not t - node.val:
+                hit += 1
+        targets = [t - node.val for t in targets] + [origin]
+        return hit + self.helper(node.left, origin, targets) + self.helper(node.right, origin, targets)
