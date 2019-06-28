@@ -1,10 +1,17 @@
-print(
-    int(''.join(reversed(list(bin(0b00000010100101000001111010011100)[2:]))), 2))
+def isPerfectSquare(num):
+    """
+    :type num: int
+    :rtype: bool
+    """
+    if num < 0:
+        return False
+    x, i = 0, 1
+    while x < num:
+        x += i
+        i += 2
+        print(x, i)
 
-for i in reversed(list(bin(0b00000010100101000001111010011100))):
-    print(i)
+    return x == num
 
-a = list(reversed(list(bin(0b00000010100101000001111010011100))[2:]))
-print(a)
-a.append(['0' * (32 - len(a))])
-print(a)
+
+print(isPerfectSquare(15))

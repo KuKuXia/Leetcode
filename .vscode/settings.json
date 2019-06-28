@@ -3,5 +3,10 @@
     "cSpell.words": [
         "reduce",
         "rtype"
+    ],
+    "cSpell.ignoreWords": [
+        "holle",
+        "leotcede",
+        "unichr"
     ]
 }
