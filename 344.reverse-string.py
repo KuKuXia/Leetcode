@@ -45,7 +45,7 @@
 
 
 class Solution(object):
-    def reverseString(self, s):
+    def reverseString_1(self, s):
         """
         :type s: List[str]
         :rtype: None Do not return anything, modify s in-place instead.
@@ -60,3 +60,10 @@ class Solution(object):
 
     def reverseString_2(self, s):
         return s[::-1]
+
+    def reverseString(self, s):
+        if not s:
+            return
+        a = len(s)
+        for i in range(a + 1):
+            s.insert(i-a, s.pop())

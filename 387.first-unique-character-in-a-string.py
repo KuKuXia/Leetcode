@@ -34,7 +34,7 @@
 
 
 class Solution(object):
-    def firstUniqChar(self, s):
+    def firstUniqChar_1(self, s):
         """
         :type s: str
         :rtype: int
@@ -53,3 +53,7 @@ class Solution(object):
                 break
             idx += 1
         return ret
+    
+    def firstUniqChar(self, s):
+        d = {c: s.count(c) for c in set(s)}
+        return ([i for i, c in enumerate(s) if d[c]==1] + [-1])[0]

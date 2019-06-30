@@ -39,7 +39,7 @@
 #
 #
 
-
+import operator
 class Solution(object):
     def isAnagram_1(self, s, t):
         """
@@ -60,10 +60,14 @@ class Solution(object):
     def isAnagram_2(self, s, t):
         return sorted(s) == sorted(t)
     
-    def isAnagram(self, s, t):
+    def isAnagram_3(self, s, t):
         dict_s, dict_t = [0] * 26, [0] * 26
         for key in s:
             dict_s[ord(key) - ord('a')] += 1
         for key in t:
             dict_t[ord(key) - ord('a')] += 1
         return dict_s == dict_t
+
+    def isAnagram(self, s, t):
+        return operator.eq({c: s.count(c) for c in set(s)}, {c: t.count(c) for c in set(t)})
+        
