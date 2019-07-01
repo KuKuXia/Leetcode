@@ -14,4 +14,12 @@ def isPerfectSquare(num):
     return x == num
 
 
-print(isPerfectSquare(15))
+def gcd(a, b):
+    if (b == 0):
+        return a
+    else:
+        print(a, b)
+        return gcd(b, a % b)
+
+
+print(gcd(30, 35))
