@@ -22,4 +22,19 @@ def gcd(a, b):
         return gcd(b, a % b)
 
 
-print(gcd(30, 35))
+a = 0
+
+
+def fib(n):
+    global a
+    a += 1
+    if(n == 0):
+        return 1
+    elif(n == 1):
+        return 2
+    else:
+        return fib(n-1)+fib(n-2)
+
+
+fib(9)
+print(a)

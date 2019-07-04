@@ -61,3 +61,14 @@ class Solution:
             b = a+b
             a = tmp
         return b
+
+    # You can't use the recursive version in this problem. Time limit exceeded.
+    def climbStairs_2(self, n: int) -> int:
+        if n == 1:
+            return 1
+        if n == 2:
+            return 2
+        return self.climbStairs(n-1) + self.climbStairs(n-2)
+
+
+
