@@ -35,6 +35,19 @@ def fib(n):
     else:
         return fib(n-1)+fib(n-2)
 
+def findMaxConsecutiveOnes(nums):
+    a = []
+    b = 0
+    for i in nums:
+        if i != 0:
+            b += 1
+        else:
+            a.append(b)
+            b = 0
+    a.append(b)
+    return max(a)
 
-fib(9)
-print(a)
+findMaxConsecutiveOnes([1])
+
+a = [1, 2, 3, 4,]
+print(a.index(2))
